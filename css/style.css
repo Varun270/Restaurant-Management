@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navlist{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    
+    align-items: center;
+}
+
+.navlist li{
+    list-style: none;
+    padding: 26px 30px;
+    
+    
+}
+
+.navlist li a{
+    text-decoration: none;
+    color: aqua;
+    
+}
+
+.navlist li a:hover{
+    color: grey;
+}
+
+.rightNav{
+    background-color: black;
+    width: 100%;
+    text-align: right;
+}
+
+#search{
+    
+    padding: 5px;
+    font-size: 17px;
+    border: 2px solid gray;
+    border-radius: 9px;
+}
+
+.background-image{
+    background-image: url("./resources/img1.jpg");
+    width: 300px;
+    height: 300px;
+
+
+}
