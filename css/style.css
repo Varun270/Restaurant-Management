@@ -8,47 +8,6 @@ html,body{
     padding: 0;
 }
 
-.navlist{
-    width: 100%;
-    background-color: black;
-    display: flex;
-    
-    align-items: center;
-}
-
-.navlist li{
-    list-style: none;
-    padding: 26px 30px;
-    
-    
-}
-
-.navlist li a{
-    text-decoration: none;
-    color: aqua;
-    
-}
-
-.navlist li a:hover{
-    color: grey;
-}
-
-.rightNav{
-    background-color: black;
-    width: 100%;
-    text-align: right;
-}
-
-#search{
-    
-    padding: 5px;
-    font-size: 17px;
-    border: 2px solid gray;
-    border-radius: 9px;
-}
-
-.background-image{
-    background: url("../resources/img1.jpg") 0% 0% / cover no-repeat fixed;
-    color:white;
-
-}
+.navColorChange {
+    background-color: #000000eb;
+  }

@@ -12,12 +12,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <script src="./JS/main.js"></script>
+    <!-- bootstrap icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.0/font/bootstrap-icons.min.css"
+        integrity="sha512-H4E1ASW8Ru1Npd1wQPB7JClskV8Nv1FG/bXK6TWMD+U9YMlR+VWUZp7SaIbBVBV/iRtefsIsv9dLSN6fdUI36w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./JS/main.js"></script>
 </head>
 
 <body style="height: 100%; width: 100%">
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark m-3" id="navBar"
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" id="navBar"
         style="scroll-behavior: smooth; transition: 1s">
         <div class="container-fluid">
             <div style="height: 60px">
@@ -30,26 +37,26 @@
             </div>
             <!-- tongle btn for navbar on small viewport -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onPress="changeNavColor();">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item px-5">
+                    <li class="nav-item px-4">
                         <!-- navbar item #1 -->
                         <a class="nav-link fs-5" href="#" style="font-weight: 600">Home</a>
                     </li>
-                    <li class="nav-item px-5">
+                    <li class="nav-item px-4">
                         <!-- navbar item #2 -->
-                        <a class="nav-link fs-5" href="#" style="font-weight: 600">Services</a>
+                        <a class="nav-link fs-5" href="#section-services" style="font-weight: 600">Services</a>
                     </li>
-                    <li class="nav-item px-5">
+                    <li class="nav-item px-4">
                         <!-- navbar item #3 -->
                         <a class="nav-link fs-5" href="#" style="font-weight: 600">About Us</a>
                     </li>
-                    <li class="nav-item px-5">
+                    <li class="nav-item px-4">
                         <!-- navbar item #4 -->
-                        <a class="nav-link fs-5" href="#" style="font-weight: 600">Contact Us</a>
+                        <a class="nav-link fs-5" href="#section-contact" style="font-weight: 600">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -61,19 +68,19 @@
         background: url('./resources/img1.jpg') 0% 0% / cover no-repeat fixed;
         height: 100%;
       ">
-        <div class="container m-5" style="background-size: cover;">
+        <div class="container my-5" style="background-size: cover;">
             <div class="row align-items-center" style="background-size: cover">
                 <div class="col-lg-6 text-white">
                     <h2>Welcome</h2>
                     <p>
                         We here at the Pegasus Chains of Hotels and Restaurant welcomes you
-                        to the total delightness of Pegasus. We currently stand at the No.1 
+                        to the total delightness of Pegasus. We currently stand at the No.1
                         position of Chains of Hotels providing our facilities to over 20+ countries.
                     </p>
 
                     <a href="#" class="btn btn-lg btn-danger text-white my-1">See Our Menu</a>
                     <a href="#" class="btn btn-lg btn-danger text-white my-1">Book a Table</a>
-                    
+
                 </div>
 
                 <div class="col-lg-6 mb-sm-30">
@@ -104,6 +111,117 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- services section -->
+    <section id="section-services" class="py-5" style="
+        background: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm251-aum-13-g.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=fbcd0cdb80b3342ce32a17174f6c2024')
+          0% 0% / cover no-repeat fixed;
+      ">
+        <!-- <div class="wm wm-border dark wow fadeInDown  animated" style="visibility: visible; animation-name: fadeInDown; background-size: cover;">features</div> -->
+        <div class="container text-white" style="background-size: cover">
+            <div class="row" style="background-size: cover;">
+                <div class="col-md-6 offset-md-5 pb-6">
+                    <h1>Our Services</h1>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="text" style="background-size: cover">
+                        <h3><span>Breakfast</span></h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
+                            delectus officiis aut culpa pariatur et molestiae, minima
+                            nostrum debitis?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="text" style="background-size: cover">
+                        <h3><span>Room Service</span></h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
+                            delectus officiis aut culpa pariatur et molestiae, minima
+                            nostrum debitis?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="text" style="background-size: cover">
+                        <h3><span>Free Parking</span></h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
+                            delectus officiis aut culpa pariatur et molestiae, minima
+                            nostrum debitis?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="text" style="background-size: cover">
+                        <h3><span>Internet Access</span></h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
+                            delectus officiis aut culpa pariatur et molestiae, minima
+                            nostrum debitis?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="text" style="background-size: cover">
+                        <h3><span>Business Centre</span></h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
+                            delectus officiis aut culpa pariatur et molestiae, minima
+                            nostrum debitis?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="text" style="background-size: cover">
+                        <h3><span>Parties</span></h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
+                            delectus officiis aut culpa pariatur et molestiae, minima
+                            nostrum debitis?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+
+    <section id="section-contact" class="py-5" style="
+    background-color: black;
+  ">
+        <div class="container" style="background-size: cover">
+            <div class="row align-items-center" style="background-size: cover">
+
+                <div class="col-md-6 text-white" style="background-size: cover;">
+                    <div class="fs-3">Contact Us</div>
+                </div>
+
+                <div class="col-md-3 text-white " style="background-size: cover;">
+                    <div class="social-icons" style="background-size: cover;">
+                        <a href="#"><i class="bi-facebook" style="font-size: xx-large;"></i></a>
+                        <a href="#"><i class="bi-instagram" style="font-size: xx-large; color:  #E1306C;"></i></a>
+                        <a href="#"><i class="bi-linkedin" style="font-size: xx-large; color: #0e76a8;"></i></a>
+                        <a href="#"><i class="bi bi-youtube" style="font-size: xx-large; color: #FF0000;"></i></a>
+                        <a href="#"><i class="bi bi-pinterest" style="font-size: xx-large; color: #FF0000;"></i></a>
+                        <a href="#"><i class="bi bi-twitter" style="font-size: xx-large; color: #FF0000;"></i></a>
+
+
+                        
                     </div>
                 </div>
             </div>
