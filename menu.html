@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <script src="./JS/main.js"></script>
+</head>
+
+<body onload="displayItems();">
+    <!-- Navbar -->
+    <nav class="navbar sticky-bottom navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Pegasus Chain of Hotels And Restaurant</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item px-5">
+                        <!-- navbar item #1 -->
+                        <a class="nav-link fs-5" href="main.html" style="font-weight: 600">Home</a>
+                    </li>
+                    <li class="nav-item px-5">
+                        <!-- navbar item #2 -->
+                        <a class="nav-link fs-5" href="services.html" style="font-weight: 600">Services</a>
+                    </li>
+                    <li class="nav-item px-5">
+                        <!-- navbar item #3 -->
+                        <a class="nav-link fs-5" href="#" style="font-weight: 600">About Us</a>
+                    </li>
+                    <li class="nav-item px-5">
+                        <!-- navbar item #4 -->
+                        <a class="nav-link fs-5" href="contact.html" style="font-weight: 600">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- This section display's the Food items available -->
+    <section id="menu-section" class="container justify-content-center my-5">
+        <div class="container">
+            <div class="row" id="displayRow">
+            </div>
+        </div>
+    </section>
+</body>
+
+
+<script>
+
+
+    //function to display items in webpage
+    function displayItems(params) {
+
+
+        params = [{ title: 'Dal Makhni', desc: 'Black and yellow lentils cooked with onion,tomat,herbs and ghee', img: 'https://www.cookwithmanali.com/wp-content/uploads/2019/04/Restaurant-Style-Dal-Makhani-500x500.jpg' },
+        { title: 'Dal Fry', desc: "Yellow & red lentils cooked and fried in butter.", img: 'https://mytastycurry.com/wp-content/uploads/2021/04/Dal-Tadka-Recipe.jpg' },
+        { title: 'Butter Paneer', desc: 'Fresh homemade cheese cubes cooked in a mild creamy sauce.', img: 'https://www.ruchiskitchen.com/wp-content/uploads/2020/12/Paneer-butter-masala-recipe-3-500x375.jpg' }]
+
+        for (let i of params) {
+
+            template_Item = `
+                        <div class="card" style="width: 18rem;">
+                            <img src=${i.img} class="card-img-top" alt="${i.title}" style="height:286px;width:100%">
+                            <div class="card-body">
+                                <h5 class="card-title">${i.title}</h5>
+                                <p class="card-text">${i.desc}.</p>
+                                <a href="#" class="btn btn-primary">Order</a>
+                            </div>
+                        </div>
+                    `
+
+            let newChild = document.createElement('div');
+            newChild.className = 'col m-1';
+            newChild.innerHTML = template_Item;
+            console.log(template_Item);
+
+            document.querySelector("#displayRow").appendChild(newChild);
+        }
+    }
+</script>
+
+</html> 
